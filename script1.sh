@@ -11,6 +11,7 @@ yes | sudo apt install git
 
 git config --global user.email "tema.emelyan@gmail.com"
 git config --global user.name "Artyom Emelyanenko"
+yes | sudo apt install openjdk-8-jdk
 
 sudo touch /etc/apt/sources.list.d/pgdg.list
 echo "deb http://apt.postgresql.org/pub/repos/apt/ bionic-pgdg main" | sudo tee /etc/apt/sources.list.d/pgdg.list
@@ -43,4 +44,12 @@ cd ~/pgadmin4
 source bin/activate
 python3 lib/python3.6/site-packages/pgadmin4/pgAdmin4.py
 endmsg
+
+echo "\password"
+echo "create database chat_for_10;"
+echo "create database chat_for_10_test;"
+echo "create role user;"
+echo "\password user"
+git clone https://bitbucket.org/thoughtastronaut/nkk-platform ~/Documents/git/chatfor10
+sudo -u postgres psql postgres
 
