@@ -1,17 +1,16 @@
 #!/bin/bash
 echo "deb cdrom:[Ubuntu 18.04 LTS _Bionic Beaver_ - Release amd64 (20180426)]/ bionic main restricted" | sudo tee /etc/apt/sources.list
-echo "deb http://archive.ubuntu.com/ubuntu/ bionic main restricted universe" | sudo tee -a /etc/apt/sources.list
+echo "deb http://au.archive.ubuntu.com/ubuntu/ bionic main restricted universe" | sudo tee -a /etc/apt/sources.list
 echo "deb http://security.ubuntu.com/ubuntu/ bionic-security main restricted universe" | sudo tee -a /etc/apt/sources.list
-echo "deb http://archive.ubuntu.com/ubuntu/ bionic-updates main restricted universe" | sudo tee -a /etc/apt/sources.list
+echo "deb http://au.archive.ubuntu.com/ubuntu/ bionic-updates main restricted universe" | sudo tee -a /etc/apt/sources.list
 
 sudo apt update
-yes | sudo apt upgrade
 
 yes | sudo apt install git
-
 git config --global user.email "tema.emelyan@gmail.com"
 git config --global user.name "Artyom Emelyanenko"
 yes | sudo apt install openjdk-8-jdk
+#yes | sudo apt upgrade
 
 sudo touch /etc/apt/sources.list.d/pgdg.list
 echo "deb http://apt.postgresql.org/pub/repos/apt/ bionic-pgdg main" | sudo tee /etc/apt/sources.list.d/pgdg.list
