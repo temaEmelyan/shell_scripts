@@ -82,6 +82,7 @@ sudo apt install gnome-tweaks
 
 #upgrade packages
 yes | sudo apt upgrade
+<<<<<<< HEAD:installPackages.sh
 
 
 #installing java sources
@@ -92,3 +93,4 @@ yes | sudo apt install openjdk-8-source
 sudo apt install gdebi-core
 wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
 yes | sudo gdebi google-chrome-stable_current_amd64.deb
+
