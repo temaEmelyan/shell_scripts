@@ -82,7 +82,6 @@ sudo apt install gnome-tweaks
 
 #upgrade packages
 yes | sudo apt upgrade
-<<<<<<< HEAD:installPackages.sh
 
 
 #installing java sources
